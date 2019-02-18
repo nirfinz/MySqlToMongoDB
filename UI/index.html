@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>MySQL to MongoDB</title>
+    <link rel="stylesheet" href="https://bootswatch.com/4/cerulean/bootstrap.min.css">
+  </head>
+  <body>
+    <div class="container">
+      <h1>MySQL to MongoDB</h1>
+      <div class="jumbotron">
+        <h1>Welcome To MySQL to MongoDB</h1>
+        <h4>This application is made to export MySQL tables into MongoDB collections </h4>
+        <h4>and perform MongoDB queries. </h4>
+      </div>
+      <div class="panel panel-primary">
+        <div class="panel-heading">Enter table name</div>
+        <div class="panel-body">
+          <input type="text" class="form-control" id="tableName" placeholder="Table Name..."/><br/>
+          <button class="btn btn-primary" onclick="getMySqlTable()">Get MySQL Table</button>
+          <button class="btn btn-primary" onclick="getMongoDbCollection()">Convert Table to MongoDB collection</button>
+          <div class="panel-body" id="tablesResult"></div>
+        </div>
+      </div><br/>
+      <div class="panel panel-primary">
+        <div class="panel-body">
+          <button class="btn btn-primary" onclick="getMaxSalary()">Get maximum salary</button>
+          <div class="panel-body" id="maxSalary"></div>
+        </div>
+      </div><br/>
+      <div class="panel panel-primary">
+        <div class="panel-heading">Enter county name</div>
+        <div class="panel-body">
+          <input type="text" class="form-control" id="countryName" placeholder="Country Name..."/><br/>
+          <button class="btn btn-primary" onclick="getNumberOfEmployeesFromCountry()">Get number of employees from entered county</button>
+          <div class="panel-body" id="numberOfEmplyees"></div>
+        </div>
+      </div><br/>
+      <div class="panel panel-primary">
+        <div class="panel-heading">Enter job title</div>
+        <div class="panel-body">
+          <input type="text" class="form-control" id="jobTitle" placeholder="Job Title..."/><br/>
+          <button class="btn btn-primary" onclick="getEmailsWithJobTitle()">Get emails of employees with entered job title</button>
+          <div class="panel-body" id="emailsResults"></div>
+        </div>
+      </div><br/>
+       <!-- <div class="panel panel-primary">
+        <div class="panel-heading">POST Request</div>
+        <div class="panel-body">
+          <form class="form-inline" id="todoInputForm">
+            <div class="form-group">
+              <input type="text" class="form-control" id="todoTitle" placeholder="Todo Title ...">
+            </div>
+            <button type="submit" class="btn btn-primary">Send</button>
+          </form><br/>
+          <button class="btn btn-warning" onclick="clearOutput()">Clear</button>
+          <div class="panel-body" id="postResult"></div>
+        </div>
+      </div> -->
+    </div>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
